@@ -35,7 +35,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* 使导航项水平排列 */
+    display: flex;  /*Make the navigate bar alignment*/
 }
 
 .header-content nav ul li {
