@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+    <AppHeader />
     <div class="wrapper">
-      <AppHeader />
       <main>
         <AppArticle title="Hello! Here is Zhihe Ping">
           <p>I am an Unimelb Student, Master of IT.</p>
@@ -46,13 +46,17 @@ html, body, #app {
 .wrapper {
   min-height: 100%;
   padding-bottom: 60px;
+  padding-top: 100px;
 }
 
 main {
   margin: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   /* Add any global responsive styles */
+  .wrapper {
+    padding-top: 150px;
+  }
 }
 </style>

@@ -16,7 +16,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 40px;
   text-align: center;
   background-color: #333;
   color: #fff;

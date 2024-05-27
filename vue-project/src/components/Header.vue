@@ -31,6 +31,8 @@ export default {
   background-color: #333;
   color: #fff;
   padding: 1rem;
+  width: 100%;
+  position: fixed;
 }
 
 .header-image {
@@ -67,12 +69,17 @@ export default {
 }
 
 @media screen and (max-width: 600px) {
-  .header-container {
+  /* .header-container {
     flex-direction: column;
   }
   .header-image {
     margin-right: 0;
     margin-bottom: 1rem;
+  } */
+  .header-content nav ul li{
+    display: block;
+    margin: 0 5px;
+
   }
-}
+} 
 </style>
