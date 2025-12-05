@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="hero-section fade-in-up">
       <h1 class="hero-title">Welcome to My World</h1>
-      <p class="hero-subtitle delay-100 fade-in-up">Exploring Astronomy, Physics, and Computer Science.</p>
+      <p class="hero-subtitle delay-100 fade-in-up">Exploring Philosophy, Physics, and Computer Science.</p>
       <div class="hero-buttons delay-200 fade-in-up">
         <a href="https://github.com/pingzhihe" target="_blank" class="btn btn-primary">View Github</a>
         <a href="https://charlesping.com/myBlog/" target="_blank" class="btn btn-secondary">Read Articles</a>
