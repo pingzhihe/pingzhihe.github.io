@@ -10,6 +10,9 @@
         <a href="https://github.com/pingzhihe" target="_blank" class="nav-item">Github</a>
         <a href="https://www.linkedin.com/in/zhihe-ping/" target="_blank" class="nav-item">LinkedIn</a>
         <a href="https://www.instagram.com/charles_ping_kk/" target="_blank" class="nav-item">Instagram</a>
+        <button @click="toggleTheme" class="nav-item theme-toggle" title="Toggle Theme">
+           {{ theme === 'dark' ? '☀️' : '🌙' }}
+        </button>
         <a href="mailto:pzh1760473545@gmail.com" class="nav-button">Contact Me</a>
       </div>
     </div>
@@ -21,11 +24,22 @@ export default {
   name: 'AppNavbar',
   data() {
     return {
-      isScrolled: false
+      isScrolled: false,
+      theme: 'dark'
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    
+    // Check local storage or preference
+    const savedTheme = localStorage.getItem('user-theme');
+    if (savedTheme) {
+        this.theme = savedTheme;
+    } else {
+        // Default to dark as per redesign, or check system preference
+        this.theme = 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', this.theme);
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -33,6 +47,11 @@ export default {
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 10;
+    },
+    toggleTheme() {
+        this.theme = this.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', this.theme);
+        localStorage.setItem('user-theme', this.theme);
     }
   }
 }

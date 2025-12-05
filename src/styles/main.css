@@ -12,6 +12,7 @@ body {
     background-color: var(--bg-color);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    transition: var(--theme-transition);
 }
 
 a {
@@ -38,26 +39,38 @@ button {
     cursor: pointer;
 }
 
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(163, 177, 198, 0.5);
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--bg-color);
 }
 
 /* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
 
     to {
