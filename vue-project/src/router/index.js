@@ -1,22 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
-import NoHeaderFooterLayout from '../layouts/NoHeaderFooterLayout.vue';
-import HomePage from '../components/HomePage.vue';
-import ArticlesPage from '../components/ArticlesPage.vue';
+import BlogPage from '../views/BlogPage.vue'; // 确保导入 BlogPage
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 const routes = [
   {
     path: '/',
-    component: DefaultLayout,
+    component: DefaultLayout, // 确保使用的是正确的布局
     children: [
-      { path: '', component: HomePage },
-    ],
-  },
-  {
-    path: '/articles',
-    component: NoHeaderFooterLayout,
-    children: [
-      { path: '', component: ArticlesPage },
+      { path: '', component: BlogPage }, // 使用 BlogPage 代替 ArticlesPage
     ],
   },
 ];

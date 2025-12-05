@@ -1,0 +1,37 @@
+:root {
+  /* Neumorphism Colors */
+  --bg-color: #e0e5ec;
+  --text-color: #4a4a4a;
+  --secondary-text-color: #9baacf;
+  --hover-bg-color: #e0e5ec;
+  /* Same as bg for neumorphism, we use shadows for hover */
+  --border-color: transparent;
+  /* Neumorphism relies on shadows, not borders */
+
+  /* Neumorphism Shadows */
+  --shadow-neumorphic-out: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  --shadow-neumorphic-out-hover: 12px 12px 20px rgb(163, 177, 198, 0.7), -12px -12px 20px rgba(255, 255, 255, 0.6);
+  --shadow-neumorphic-in: inset 6px 6px 10px 0 rgba(163, 177, 198, 0.7), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.8);
+
+  /* Typography - Marketing Style */
+  --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: "Lyon-Text", Georgia, serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 96px;
+
+  /* Radius */
+  --radius-md: 20px;
+  --radius-lg: 30px;
+}
+
+[data-theme='dark'] {
+  /* Dark mode neumorphism is tricky, sticking to light for now as per plan */
+  --bg-color: #292d32;
+  --text-color: #e0e5ec;
+  --shadow-neumorphic-out: 5px 5px 10px #1b1e22, -5px -5px 10px #373c42;
+}
